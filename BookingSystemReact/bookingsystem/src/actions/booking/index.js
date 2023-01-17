@@ -11,7 +11,6 @@ export const resourceBooking = (resource) => {
 
         await apiData.post(`api/booking/create`, resource)
         .then((response) => {
-            console.log(response);
             dispatch({
                 type: "REQUESTED_BOOKING",
                 payload: {
@@ -20,7 +19,6 @@ export const resourceBooking = (resource) => {
                 }
             });
         }).catch((response) => {
-            console.log(response);
             dispatch({
                 type: "REQUESTED_BOOKING",
                 payload: {
